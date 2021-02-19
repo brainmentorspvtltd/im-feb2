@@ -1,0 +1,407 @@
+function add(){
+console.log('I am Add ');
+}
+undefined
+typeof add;
+"function"
+add();
+VM5471:2 I am Add 
+undefined
+function add(){
+console.log('I am Add ');
+return 3;
+}
+undefined
+add();
+VM5539:2 I am Add 
+3
+function add(){
+console.log('I am Add ');
+
+}
+undefined
+console.dir(add);
+VM5673:1 ƒ add()arguments: nullcaller: nulllength: 0name: "add"prototype: {constructor: ƒ}__proto__: ƒ ()[[FunctionLocation]]: VM5618:1[[Scopes]]: Scopes[1]
+undefined
+function add(){
+console.log('I am Add ',arguments.length);
+
+}
+undefined
+add(10,20);
+VM5766:2 I am Add  2
+undefined
+add(10);
+VM5766:2 I am Add  1
+undefined
+add();
+VM5766:2 I am Add  0
+undefined
+function add(){
+//console.log('I am Add ',arguments.length);
+var sum = 0;
+for(var i = 0; i<arguments.length;i++){
+sum+=arguments[i];
+}
+return sum;
+}
+undefined
+add(1,2,3);
+6
+add(1,2,3,4,5);
+15
+add(1,2,"3",4,5);
+"3345"
+function add(){
+//console.log('I am Add ',arguments.length);
+var sum = 0;
+for(var i = 0; i<arguments.length;i++){
+sum+=parseInt(arguments[i]);
+}
+return sum;
+}
+undefined
+add(1,2,"3",4,5);
+15
+parseInt("five");
+NaN
+NaN + 54543;
+NaN
+add(1,2,"3",4,"five");
+NaN
+function add(){
+//console.log('I am Add ',arguments.length);
+var sum = 0;
+for(var i = 0; i<arguments.length;i++){
+sum+=isNaN(parseInt(arguments[i]))?0:parseInt(arguments[i]);
+}
+return sum;
+}
+undefined
+add(1,2,"3",4,"five");
+10
+function two(){
+return 2;
+}
+undefined
+function three(){
+return "3";
+}
+undefined
+add(1,two,three,4,"five");
+5
+parseInt(two);
+NaN
+parseInt(two());
+2
+typeof two;
+"function"
+function add(){
+//console.log('I am Add ',arguments.length);
+var sum = 0;
+for(var i = 0; i<arguments.length;i++){
+if(typeof arguments[i] ==="function"){
+arguments[i] = arguments[i]();
+}
+sum+=isNaN(parseInt(arguments[i]))?0:parseInt(arguments[i]);
+}
+return sum;
+}
+undefined
+add(1,two,three,4,"five");
+10
+add(1, two,[3,"4"],"five");
+6
+function add(){
+//console.log('I am Add ',arguments.length);
+var sum = 0;
+for(var i = 0; i<arguments.length;i++){
+if(arguments[i] instanceof Array){
+    for(var j= 0 ; j<arguments[i].length; j++){
+        if(typeof arguments[i] ==="function"){
+arguments[i] = arguments[i]();
+}
+        sum+=isNaN(parseInt(arguments[i][j]))?0:parseInt(arguments[i][j]);
+}
+continue;
+}
+
+if(typeof arguments[i] ==="function"){
+arguments[i] = arguments[i]();
+}
+
+sum+=isNaN(parseInt(arguments[i]))?0:parseInt(arguments[i]);
+}
+return sum;
+}
+undefined
+add(1, two,[3,"4"],"five");
+10
+function jQuery(){
+console.log(arguments.length);
+}
+undefined
+jQuery(document);
+VM7158:2 1
+undefined
+jQuery('#id');
+VM7158:2 1
+undefined
+var $ = jQuery;
+undefined
+$(document);
+VM7158:2 1
+undefined
+function add(...args){
+//console.log('I am Add ',arguments.length);
+var sum = 0;
+for(var i = 0; i<args.length;i++){
+if(args[i] instanceof Array){
+    for(var j= 0 ; j<args[i].length; j++){
+        if(typeof args[i] ==="function"){
+args[i] = args[i]();
+}
+        sum+=isNaN(parseInt(args[i][j]))?0:parseInt(args[i][j]);
+}
+continue;
+}
+
+if(typeof args[i] ==="function"){
+args[i] = args[i]();
+}
+
+sum+=isNaN(parseInt(args[i]))?0:parseInt(args[i]);
+}
+return sum;
+}
+undefined
+add(1, two,[3,"4"],"five");
+10
+function add(...args){
+console.log(args instanceof Array);
+console.log(arguments instanceof Array);
+//console.log('I am Add ',arguments.length);
+var sum = 0;
+for(var i = 0; i<args.length;i++){
+if(args[i] instanceof Array){
+    for(var j= 0 ; j<args[i].length; j++){
+        if(typeof args[i] ==="function"){
+args[i] = args[i]();
+}
+        sum+=isNaN(parseInt(args[i][j]))?0:parseInt(args[i][j]);
+}
+continue;
+}
+
+if(typeof args[i] ==="function"){
+args[i] = args[i]();
+}
+
+sum+=isNaN(parseInt(args[i]))?0:parseInt(args[i]);
+}
+return sum;
+}
+undefined
+add(1, two,[3,"4"],"five");
+VM7533:2 true
+VM7533:3 false
+10
+var dd = [10,20,30];
+undefined
+function second(...q,...r){
+
+}
+VM7659:1 Uncaught SyntaxError: Rest parameter must be last formal parameter
+function second(...r){
+
+}
+undefined
+function second(z,t,...r){
+console.log(z,t,r);
+}
+undefined
+second(10,20,100,200,300,400);
+VM7727:2 10 20 (4) [100, 200, 300, 400]
+undefined
+second(10,20,100,200,300,400,two,three);
+VM7727:2 10 20 (6) [100, 200, 300, 400, ƒ, ƒ]0: 1001: 2002: 3003: 4004: ƒ two()5: ƒ three()length: 6__proto__: Array(0)
+undefined
+var f1 = [10,20,30];
+undefined
+var f2 = [100,200,300];
+undefined
+var f3 = [f1, f2];
+undefined
+f3;
+(2) [Array(3), Array(3)]0: (3) [10, 20, 30]1: (3) [100, 200, 300]length: 2__proto__: Array(0)
+var f3 = [...f1,...f2];
+undefined
+f3;
+(6) [10, 20, 30, 100, 200, 300]
+var obj = {id:1001, name:'Ram'};
+undefined
+var obj2 = {salary:1111,bonus:11,id:1002};
+undefined
+var obj3 = {...obj, ...obj2};
+undefined
+obj3;
+{id: 1002, name: "Ram", salary: 1111, bonus: 11}
+function addition(x,y){
+return x + y;
+}
+undefined
+addition();
+NaN
+function addition(x,y){
+console.log(x, y);
+return x + y;
+}
+undefined
+addition();
+VM8377:2 undefined undefined
+NaN
+undefined + undefined;
+NaN
+undefined + 1000
+NaN
+function addition(x=0,y=0){
+console.log(x, y);
+return x + y;
+}
+undefined
+addition();
+VM8475:2 0 0
+0
+addition(100);
+VM8475:2 100 0
+100
+var f2 ;
+undefined
+var f5 ;
+undefined
+typeof f5;
+"undefined"
+f5 = 10000;
+10000
+typeof f5;
+"number"
+addition(null, null);
+VM8475:2 null null
+0
+null + null;
+0
+100 + null;
+100
+var obj  = {id:1001, name:'Ram'};
+undefined
+obj = null;
+null
+typeof obj;
+"object"
+addition("","");
+VM8475:2  
+""
+var b1 ;
+undefined
+typeof b1;
+"undefined"
+b1;
+undefined
+if(b1){
+    console.log('Truthy');
+}
+else{
+    console.log('Falsy');
+}
+VM9237:5 Falsy
+undefined
+b1 = null;
+null
+if(b1){
+    console.log('Truthy');
+}
+else{
+    console.log('Falsy');
+}
+VM9271:5 Falsy
+undefined
+b1 = 0;
+0
+if(b1){
+    console.log('Truthy');
+}
+else{
+    console.log('Falsy');
+}
+VM9288:5 Falsy
+undefined
+b1 = "";
+""
+if(b1){
+    console.log('Truthy');
+}
+else{
+    console.log('Falsy');
+}
+VM9314:5 Falsy
+undefined
+b1 = NaN;
+NaN
+if(b1){
+    console.log('Truthy');
+}
+else{
+    console.log('Falsy');
+}
+VM9341:5 Falsy
+undefined
+b1 = 1000;
+1000
+if(b1){
+    console.log('Truthy');
+}
+else{
+    console.log('Falsy');
+}
+VM9369:2 Truthy
+undefined
+b1 = "Amit";
+"Amit"
+if(b1){
+    console.log('Truthy');
+}
+else{
+    console.log('Falsy');
+}
+VM9386:2 Truthy
+undefined
+function addition(x,y){
+console.log(x, y);
+x = x || 0;
+y = y || 0;
+return x + y;
+}
+undefined
+addition(NaN, NaN);
+VM9490:2 NaN NaN
+0
+addition(10, NaN);
+VM9490:2 10 NaN
+10
+addition(10, undefined);
+VM9490:2 10 undefined
+10
+function addition(x=0,y=0){
+console.log(x, y);
+return x + y;
+}
+undefined
+addition(10);
+VM9685:2 10 0
+10
+addition(10,NaN);
+VM9685:2 10 NaN
+NaN
+addition(10,0);
+VM9685:2 10 0
+10

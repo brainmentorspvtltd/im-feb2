@@ -1,0 +1,339 @@
+var a;
+undefined
+typeof a;
+"undefined"
+a = 100;
+100
+typeof a;
+"number"
+b;
+VM750:1 Uncaught ReferenceError: b is not defined
+    at <anonymous>:1:1
+(anonymous) @ VM750:1
+b = 3000;
+3000
+a = 100.20;
+100.2
+typeof a;
+"number"
+a =10000000;
+10000000
+typeof a;
+"number"
+a = Number.MAX_SAFE_INTEGER;
+9007199254740991
+++a;
+9007199254740992
+++a;
+9007199254740992
+++a;
+9007199254740992
+++a;
+9007199254740992
+++a;
+9007199254740992
+typeof a;
+"number"
+a = 9007199254740992n;
+9007199254740992n
+typeof a;
+"bigint"
+a + 9007199254740992n;
+18014398509481984n
+a + 4343434;
+VM1044:1 Uncaught TypeError: Cannot mix BigInt and other types, use explicit conversions
+    at <anonymous>:1:3
+(anonymous) @ VM1044:1
+a = 1n;
+1n
+typeof a;
+"bigint"
+a;
+1n
+a + 1n;
+2n
+var c = BigInt(1000);
+undefined
+c;
+1000n
+typeof BigInt;
+"function"
+var c = BigInt("534545645654645765743");
+undefined
+c;
+534545645654645765743n
+c = 423432423;
+423432423
+c = 1000/0;
+Infinity
+typeof c;
+"number"
+a = Number.MAX_SAFE_INTEGER;
+9007199254740991
+a * a;
+8.112963841460666e+31
+a = a * a;
+8.112963841460666e+31
+a = "Amit" - "Srivastava"
+NaN
+typeof a;
+"number"
+isNaN(a)?0:a;
+0
+a = 100/0;
+Infinity
+isFinite(a)?a:0;
+0
+a ="100";
+"100"
+typeof a;
+"string"
+a + 200;
+"100200"
+parseInt(a) + 200;
+300
+a = "100.20";
+"100.20"
+parseFloat(a) + 2000;
+2100.2
+a;
+"100.20"
+typeof parseInt(a);
+"number"
+typeof a;
+"string"
+var name = "Amit";
+undefined
+typeof name;
+"string"
+name = 'Amit';
+"Amit"
+typeof a;
+"string"
+typeof name;
+"string"
+name = `gdjghdfjkghfdjkhghghfdgkjhfdjkghkfjd
+gdhfkjghfdjkgh
+gdhkjghdjfkhgkjdfh
+gdfhgjk`;
+"gdjghdfjkghfdjkhghghfdgkjhfdjkghkfjd
+gdhfkjghfdjkgh
+gdhkjghdjfkhgkjdfh
+gdfhgjk"
+name;
+"gdjghdfjkghfdjkhghghfdgkjhfdjkghkfjd
+gdhfkjghfdjkgh
+gdhkjghdjfkhgkjdfh
+gdfhgjk"
+typeof name;
+"string"
+a = 100;
+100
+b = 200;
+200
+"A is "+a +" and B is "+b;
+"A is 100 and B is 200"
+`A is ${a} and B is ${b}`;
+"A is 100 and B is 200"
+var f = true;
+undefined
+typeof f;
+"boolean"
+true + true;
+2
+100 + true
+101
+100 - false
+100
+true + 100 
+101
+var z = [100,200,300,400];
+undefined
+var z2 = z;
+undefined
+z[0]=1000000;
+1000000
+z;
+(4) [1000000, 200, 300, 400]
+z2;
+(4) [1000000, 200, 300, 400]
+var dd = 1000;
+undefined
+var d1 = dd;
+undefined
+d1;
+1000
+dd;
+1000
+d1++;
+1000
+d1;
+1001
+dd;
+1000
+var price = 900000;
+undefined
+price.toLocaleString('hi-IN');
+"9,00,000"
+price;
+900000
+price.toLocaleString('fr-FR');
+"900 000"
+price = 90000.20;
+90000.2
+price.toLocaleString('fr-FR');
+"90 000,2"
+price.toLocaleString('hi-IN');
+"90,000.2"
+name = "Amit";
+"Amit"
+name.toUpperCase();
+"AMIT"
+name;
+"Amit"
+var prices = [90,20,11,10];
+undefined
+prices.sort();
+(4) [10, 11, 20, 90]
+prices;
+(4) [10, 11, 20, 90]0: 101: 112: 203: 90length: 4__proto__: Array(0)
+var prices = [90,20,11,10];
+undefined
+var d = [...prices];
+undefined
+d;
+(4) [90, 20, 11, 10]
+d.sort();
+(4) [10, 11, 20, 90]
+d;
+(4) [10, 11, 20, 90]
+prices;
+(4) [90, 20, 11, 10]
+typeof prices;
+"object"
+prices instanceof Array;
+true
+typeof Array;
+"function"
+Array.prototype.sort;
+ƒ sort() { [native code] }
+typeof prices[0];
+"number"
+var w = 100,200;
+VM3543:1 Uncaught SyntaxError: Unexpected number
+var w = [100,200];
+undefined
+var temp = {"delhi":20,"mumbai":22};
+undefined
+w[0];
+100
+temp["delhi"];
+20
+typeof w;
+"object"
+typeof temp;
+"object"
+w instanceof Array;
+true
+temp instanceof Array;
+false
+temp instanceof Object;
+true
+w instanceof Array;
+true
+w instanceof Object;
+true
+typeof Object;
+"function"
+w;
+(2) [100, 200]
+var f = [...w];
+undefined
+f;
+(2) [100, 200]
+var temp2 = {...temp};
+undefined
+temp2;
+{delhi: 20, mumbai: 22}
+temp2["delhi"] = 23;
+23
+temp2;
+{delhi: 23, mumbai: 22}
+temp;
+{delhi: 20, mumbai: 22}
+w;
+(2) [100, 200]0: 1001: 2002: 1000length: 3__proto__: Array(0)concat: ƒ concat()constructor: ƒ Array()copyWithin: ƒ copyWithin()entries: ƒ entries()every: ƒ every()fill: ƒ fill()filter: ƒ filter()find: ƒ find()findIndex: ƒ findIndex()flat: ƒ flat()flatMap: ƒ flatMap()forEach: ƒ forEach()includes: ƒ includes()indexOf: ƒ indexOf()join: ƒ join()keys: ƒ keys()lastIndexOf: ƒ lastIndexOf()length: 0map: ƒ map()pop: ƒ pop()push: ƒ push()reduce: ƒ reduce()reduceRight: ƒ reduceRight()reverse: ƒ reverse()shift: ƒ shift()slice: ƒ slice()some: ƒ some()sort: ƒ sort()splice: ƒ splice()toLocaleString: ƒ toLocaleString()toString: ƒ toString()unshift: ƒ unshift()values: ƒ values()Symbol(Symbol.iterator): ƒ values()Symbol(Symbol.unscopables): {copyWithin: true, entries: true, fill: true, find: true, findIndex: true, …}__proto__: Object
+w.length;
+2
+w.push(1000);
+3
+w;
+(3) [100, 200, 1000]
+var name = "Amit";
+undefined
+typeof name;
+"string"
+var name2 = new String("Amit");
+undefined
+name2;
+String {"Amit"}
+name;
+"Amit"
+name2.toUpperCase();
+"AMIT"
+name2.substring(2);
+"it"
+typeof name2;
+"object"
+var f2 = 1000;
+undefined
+var f3 = new Number(2000);
+undefined
+f3.toLocaleString('hi-IN');
+"2,000"
+f2;
+1000
+f3;
+Number {2000}
+f2.toLocaleString('en-US');
+"1,000"
+f2;
+1000
+var fff = [];
+undefined
+var dd = [];
+undefined
+fff == dd;
+false
+[] ==[];
+false
+10 =="10"
+true
+10==="10";
+false
+2n + 4;
+VM4997:1 Uncaught TypeError: Cannot mix BigInt and other types, use explicit conversions
+    at <anonymous>:1:4
+(anonymous) @ VM4997:1
+var x = 100;
+undefined
+var x = "Amit";
+undefined
+typeof x;
+"string"
+x;
+"Amit"
+var y = new String("Amit");
+undefined
+y;
+String {"Amit"}
+String.prototype.toLowerCase
+ƒ toLowerCase() { [native code] }
+x.toLowerCase();
+"amit"
+x;
+"Amit"
+typeof y;
+"object"
+typeof x;
+"string"
