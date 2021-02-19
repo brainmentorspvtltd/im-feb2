@@ -1,0 +1,450 @@
+function test3(){
+//console.log(j);
+let j  = 10;
+console.log(j);
+if(j>2){
+let j = 200;
+console.log(j);
+}
+//let j = 300;
+console.log(j);
+}
+undefined
+test3();
+VM1560:4 10
+VM1560:7 200
+VM1560:10 10
+undefined
+function add(){
+console.log(" I am Add Function ");
+}
+undefined
+window.add;
+ƒ add(){
+console.log(" I am Add Function ");
+}
+var addition = function(){
+    console.log("I am Add Function ");
+}
+undefined
+//var add2;
+add2();
+//add2 = function(){
+var add2 = function(){
+    console.log("I am Add2 Function ");
+}
+VM716:3 I am the Add2 function ... 
+undefined
+//var add2;
+add21();
+//add2 = function(){
+var add21 = function(){
+    console.log("I am Add21 Function ");
+}
+VM1779:2 Uncaught TypeError: add21 is not a function
+    at <anonymous>:2:1
+(anonymous) @ VM1779:2
+function Calc(){
+var add = function(x,y){
+    return x + y;
+}
+var sub = function(x,y){
+    return x - y;
+}
+return [add, sub];
+}
+undefined
+var f = Calc();
+undefined
+f;
+(2) [ƒ, ƒ]0: ƒ (x,y)1: ƒ (x,y)length: 2__proto__: Array(0)
+f[0];
+ƒ (x,y){
+    return x + y;
+}
+f[1];
+ƒ (x,y){
+    return x - y;
+}
+f[0](100,200);
+300
+f[1](200,100);
+100
+Calc()[0](10,20);
+30
+Calc;
+ƒ Calc(){
+var add = function(x,y){
+    return x + y;
+}
+var sub = function(x,y){
+    return x - y;
+}
+return [add, sub];
+}
+function mul(x,y){
+var z = 1;
+return x * y * z;
+}
+undefined
+f;
+(2) [ƒ, ƒ]0: ƒ (x,y)arguments: nullcaller: nulllength: 2name: "add"prototype: {constructor: ƒ}__proto__: ƒ ()[[FunctionLocation]]: VM1970:2[[Scopes]]: Scopes[2]1: ƒ (x,y)length: 2__proto__: Array(0)
+function Calc(){
+var add = function addition(x,y){
+    return x + y;
+}
+var sub = function subtraction(x,y){
+    return x - y;
+}
+return [add, sub];
+}
+undefined
+var f3 = Calc();
+undefined
+f3;
+(2) [ƒ, ƒ]0: ƒ addition(x,y)1: ƒ subtraction(x,y)length: 2__proto__: Array(0)
+f3[0].name;
+"addition"
+f3[0](10,20);
+30
+
+var add3 = (x,y)=>x+y;
+undefined
+typeof add3;
+"function"
+add3(10,20);
+30
+console.dir(add3);
+VM2710:1 add3()arguments: (...)caller: (...)length: 2name: "add3"__proto__: ƒ ()[[FunctionLocation]]: VM2576:2[[Scopes]]: Scopes[2]
+undefined
+
+var add3 = (x,y)=>{
+console.log('X is ',x,'Y is ',y);
+return x+y
+};
+undefined
+add3(100,200);
+VM2774:3 X is  100 Y is  200
+300
+//var z = 1000;
+function Calc(z){
+var m = 100;
+var add = function addition(x,y){
+    return x + y + z + m;
+}
+var sub = function subtraction(x,y){
+    return x - y - z - m;
+}
+return [add, sub];
+}
+undefined
+var g1 = Calc(1000);
+undefined
+g1[0](10,20);
+1130
+g1;
+(2) [ƒ, ƒ]0: ƒ addition(x,y)arguments: nullcaller: nulllength: 2name: "addition"prototype: {constructor: ƒ}__proto__: ƒ ()[[FunctionLocation]]: VM2893:4[[Scopes]]: Scopes[3]0: Closure (Calc) {z: 1000, m: 100}1: Script {bb: "Hi"}2: Global {window: Window, self: Window, document: document, name: "", location: Location, …}1: ƒ subtraction(x,y)arguments: nullcaller: nulllength: 2name: "subtraction"prototype: {constructor: ƒ}__proto__: ƒ ()[[FunctionLocation]]: VM2893:7[[Scopes]]: Scopes[3]0: Closure (Calc)m: 100z: 10001: Script {bb: "Hi"}2: Global {window: Window, self: Window, document: document, name: "", location: Location, …}length: 2__proto__: Array(0)
+
+function countDown(){
+var c = 0;
+return function (){    
+    c++;
+    return c;
+}
+}
+undefined
+var fn = countDown();
+undefined
+fn();
+1
+fn();
+2
+fn();
+3
+fn();
+4
+fn();
+5
+fn();
+6
+c;
+VM3223:1 Uncaught ReferenceError: c is not defined
+    at <anonymous>:1:1
+(anonymous) @ VM3223:1
+console.dir(fn);
+VM3273:1 ƒ anonymous()arguments: nullcaller: nulllength: 0name: ""prototype: {constructor: ƒ}__proto__: ƒ ()[[FunctionLocation]]: VM3132:4[[Scopes]]: Scopes[3]0: Closure (countDown)c: 61: Script {bb: "Hi"}2: Global {window: Window, self: Window, document: document, name: "", location: Location, …}
+undefined
+var fn = countDown();
+undefined
+fn();
+1
+fn();
+2
+fn();
+3
+
+var fn2 = (function (){
+var c = 0;
+return function (){    
+    c++;
+    return c;
+}
+})();
+undefined
+fn2();
+1
+fn2();
+2
+fn2();
+3
+fn2();
+4
+fn2();
+5
+function blockScope(){
+    console.log(i);
+    (function(){
+    for(var i = 1; i<=10; i++){
+        console.log(i);
+}
+})();
+}
+undefined
+blockScope();
+VM3550:2 Uncaught ReferenceError: i is not defined
+    at blockScope (<anonymous>:2:17)
+    at <anonymous>:1:1
+blockScope @ VM3550:2
+(anonymous) @ VM3572:1
+function blockScope(){
+    //console.log(i);
+    (function(){
+    for(var i = 1; i<=10; i++){
+        console.log(i);
+}
+})();
+}
+undefined
+blockScope();
+VM3579:5 1
+VM3579:5 2
+VM3579:5 3
+VM3579:5 4
+VM3579:5 5
+VM3579:5 6
+VM3579:5 7
+VM3579:5 8
+VM3579:5 9
+VM3579:5 10
+undefined
+try{
+    ggg++;
+}
+catch(e){
+    console.log('Error is ',e);
+}
+console.log(e);
+VM3726:5 Error is  ReferenceError: ggg is not defined
+    at <anonymous>:2:5
+VM3726:7 Uncaught ReferenceError: e is not defined
+    at <anonymous>:7:13
+(anonymous) @ VM3726:7
+
+var fn2 = (function (){
+var c = 0;
+return function (){    
+    c++;
+    return c;
+}
+})();
+undefined
+console.dir(fn2);
+VM3798:1 ƒ anonymous()arguments: nullcaller: nulllength: 0name: ""prototype: {constructor: ƒ}__proto__: ƒ ()[[FunctionLocation]]: VM3751:4[[Scopes]]: Scopes[3]0: Closure {c: 0}1: Script {bb: "Hi"}2: Global {window: Window, self: Window, document: document, name: "", location: Location, …}
+undefined
+fn2();
+1
+console.dir(fn2);
+VM3825:1 ƒ anonymous()arguments: nullcaller: nulllength: 0name: ""prototype: {constructor: ƒ}__proto__: ƒ ()[[FunctionLocation]]: VM3751:4[[Scopes]]: Scopes[3]0: Closure {c: 1}1: Script {bb: "Hi"}2: Global {window: Window, self: Window, document: document, name: "", location: Location, …}
+undefined
+var cache = {};
+function largeCalc(num){
+if(cache[num]){
+    console.log('Coming from the Cache ',cache[num]);
+    return ;
+}
+for(let i = 1;i<=300000;i++){
+for(let j=1;j<=10000; j++){
+}
+}
+let result = num * num;
+cache[num] = result;
+console.log('Compute and Store in Cache ',result);
+return result;
+}
+undefined
+largeCalc(3);
+VM4249:13 Compute and Store in Cache  9
+9
+largeCalc(5);
+VM4249:13 Compute and Store in Cache  25
+25
+largeCalc(3);
+VM4249:4 Coming from the Cache  9
+undefined
+largeCalc(5);
+VM4249:4 Coming from the Cache  25
+undefined
+function payment(amount){
+    return function(orderId){
+        return function(delId){
+            return "Payment is"+amount+" Order "+orderId+" Del "+delId;
+}
+}
+}
+undefined
+payment(1000)(1001)(10);
+"Payment is1000 Order 1001 Del 10"
+var o = payment();
+undefined
+var d = o();
+undefined
+d();
+"Payment isundefined Order undefined Del undefined"
+var o = payment(10000);
+undefined
+var d = o(101);
+undefined
+d(1);
+"Payment is10000 Order 101 Del 1"
+console.dir(o);
+VM4775:1 ƒ anonymous(orderId)arguments: nullcaller: nulllength: 1name: ""prototype: {constructor: ƒ}__proto__: ƒ ()[[FunctionLocation]]: VM4528:2[[Scopes]]: Scopes[3]0: Closure (payment) {amount: 10000}1: Script {bb: "Hi"}2: Global {window: Window, self: Window, document: document, name: "", location: Location, …}
+undefined
+function payment(amount){
+    return function(orderId){
+        var compute = amount * 0.10;
+        return function(delId){
+            return "Payment is"+amount+" Order "+orderId+" Del "+delId +" Tax is "+compute;
+}
+}
+}
+undefined
+payment(1000)(1001)(10);
+"Payment is1000 Order 1001 Del 10 Tax is 100"
+var x = 1000;
+function payment(amount){
+    return function(orderId){
+        var compute = amount + x * 0.10;
+        return function(delId){
+            return "Payment is"+amount+" Order "+orderId+" Del "+delId +" Tax is "+compute;
+}
+}
+}
+undefined
+payment(1000)(1001)(10);
+"Payment is1000 Order 1001 Del 10 Tax is 1100"
+x = 32324234324;
+32324234324
+payment(1000)(1001)(10);
+"Payment is1000 Order 1001 Del 10 Tax is 3232424432.4"
+var arr = [10,20,30,9,100,22, 44];
+undefined
+for(let i = 0; i<arr.length; i++){
+console.log(arr[i]);
+}
+VM5109:2 10
+VM5109:2 20
+VM5109:2 30
+VM5109:2 9
+VM5109:2 100
+VM5109:2 22
+VM5109:2 44
+undefined
+arr;
+(7) [10, 20, 30, 9, 100, 22, 44]
+arr.forEach(ele=>console.log(ele));
+VM5403:1 10
+VM5403:1 20
+VM5403:1 30
+VM5403:1 9
+VM5403:1 100
+VM5403:1 22
+VM5403:1 44
+undefined
+arr;
+(7) [10, 20, 30, 9, 100, 22, 44]
+function printIt(element){
+console.log("Element is ",element);
+}
+undefined
+arr.forEach(printIt);
+VM5551:2 Element is  10
+VM5551:2 Element is  20
+VM5551:2 Element is  30
+VM5551:2 Element is  9
+VM5551:2 Element is  100
+VM5551:2 Element is  22
+VM5551:2 Element is  44
+undefined
+arr.forEach(x=>console.log(x));
+VM5686:1 10
+VM5686:1 20
+VM5686:1 30
+VM5686:1 9
+VM5686:1 100
+VM5686:1 22
+VM5686:1 44
+undefined
+function cube(num){
+return num**3;
+}
+undefined
+function loop(callBack){
+var n = 10;
+for(let i = 1; i<=n; i++){
+console.log(callBack(n));
+}
+}
+undefined
+loop(cube);
+VM5938:4 1000
+VM5938:4 1000
+VM5938:4 1000
+VM5938:4 1000
+VM5938:4 1000
+VM5938:4 1000
+VM5938:4 1000
+VM5938:4 1000
+VM5938:4 1000
+VM5938:4 1000
+undefined
+function loop(callBack){
+var n = 10;
+for(let i = 1; i<=n; i++){
+console.log(callBack(i));
+}
+}
+undefined
+loop(cube);
+VM5986:4 1
+VM5986:4 8
+VM5986:4 27
+VM5986:4 64
+VM5986:4 125
+VM5986:4 216
+VM5986:4 343
+VM5986:4 512
+VM5986:4 729
+VM5986:4 1000
+undefined
+loop(x=>x*x);
+VM5986:4 1
+VM5986:4 4
+VM5986:4 9
+VM5986:4 16
+VM5986:4 25
+VM5986:4 36
+VM5986:4 49
+VM5986:4 64
+VM5986:4 81
+VM5986:4 100
+undefined
