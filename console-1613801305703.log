@@ -1,0 +1,402 @@
+var arr = [10,20,30,40,50];
+undefined
+arr.push(1000);
+6
+arr;
+(6) [10, 20, 30, 40, 50, 1000]
+arr.pop();
+1000
+arr.shift();
+10
+arr;
+(4) [20, 30, 40, 50]
+arr.push(111);
+5
+arr;
+(5) [20, 30, 40, 50, 111]
+arr.unshift(444);
+6
+arr;
+(6) [444, 20, 30, 40, 50, 111]
+arr.concat(1000,2000,3000);
+(9) [444, 20, 30, 40, 50, 111, 1000, 2000, 3000]
+var bb = [1,2,3];
+undefined
+arr.concat(bb);
+(9) [444, 20, 30, 40, 50, 111, 1, 2, 3]
+arr;
+(6) [444, 20, 30, 40, 50, 111]
+arr = arr.concat(bb);
+(9) [444, 20, 30, 40, 50, 111, 1, 2, 3]
+arr;
+(9) [444, 20, 30, 40, 50, 111, 1, 2, 3]
+var arr = [10,20,30,40,50];
+undefined
+var arr = new Array(10);
+undefined
+arr;
+(10) [empty × 10]
+var arr = new Array(1,2,3,4,5);
+undefined
+arr;
+(5) [1, 2, 3, 4, 5]
+var t = Array.from(10,20,30,40);
+VM1415:1 Uncaught TypeError: 20 is not a function
+    at Function.from (<anonymous>)
+    at <anonymous>:1:15
+(anonymous) @ VM1415:1
+var t = Array.from(10);
+undefined
+t;
+[]
+var gg = Array.of(10,20,30,40,50);
+undefined
+gg;
+(5) [10, 20, 30, 40, 50]
+var ff = Array.from(gg);
+undefined
+ff;
+(5) [10, 20, 30, 40, 50]
+ff;
+(5) [10, 20, 30, 40, 50]
+ff.length= 2;
+2
+ff;
+(2) [10, 20]
+ff.length;
+2
+ff.length=0;
+0
+ff;
+[]
+var arr = [10,20,30,40,50];
+undefined
+arr.splice(1);
+(4) [20, 30, 40, 50]
+arr;
+[10]
+var arr = [10,20,30,40,50];
+undefined
+arr.splice(1,1);
+[20]
+arr;
+(4) [10, 30, 40, 50]
+arr.splice(1,2);
+(2) [30, 40]
+arr;
+(2) [10, 50]
+arr.splice(1,20);
+[50]
+arr;
+[10]
+var arr = [10,20,30,40,50];
+undefined
+arr.splice(10,20);
+[]
+arr;
+(5) [10, 20, 30, 40, 50]
+arr.splice(1,1,1000);
+[20]
+arr;
+(5) [10, 1000, 30, 40, 50]
+arr.splice(1,0,8888);
+[]
+arr;
+(6) [10, 8888, 1000, 30, 40, 50]
+arr.insert
+undefined
+typeof arr;
+"object"
+arr instanceof Array;
+true
+typeof Array;
+"function"
+Array.prototype.push;
+ƒ push() { [native code] }
+Array.prototype.splice
+ƒ splice() { [native code] }
+Array.prototype.concat;
+ƒ concat() { [native code] }
+Array.prototype.insert = function(index,value){
+this.splice(index,0,value);
+}
+ƒ (index,value){
+this.splice(index,0,value);
+}
+arr;
+(6) [10, 8888, 1000, 30, 40, 50]
+arr.insert(2,7777);
+undefined
+arr;
+(7) [10, 8888, 7777, 1000, 30, 40, 50]
+this;
+Window {window: Window, self: Window, document: document, name: "", location: Location, …}
+typeof Array;
+"function"
+typeof Window;
+"function"
+Array.prototype.insert;
+ƒ (index,value){
+this.splice(index,0,value);
+}
+Array.prototype.splice
+ƒ splice() { [native code] }
+function Array(){
+console.log('I am the ARRAY ');
+}
+undefined
+Array();
+VM3147:2 I am the ARRAY 
+undefined
+const MyArray = function(){
+console.log('I am the Array');
+}
+undefined
+typeof MyArray;
+"function"
+MyArray();
+VM3294:2 I am the Array
+undefined
+const MyArray = function(){
+console.log('I am the Array........');
+}
+VM3356:1 Uncaught SyntaxError: Identifier 'MyArray' has already been declared
+var ff4 = new Array();
+VM3147:2 I am the ARRAY 
+undefined
+ff4;
+Array {}__proto__: Object
+const MAX = 100;
+undefined
+MAX++;
+VM3488:1 Uncaught TypeError: Assignment to constant variable.
+    at <anonymous>:1:4
+(anonymous) @ VM3488:1
+MAX = 200;
+VM3512:1 Uncaught TypeError: Assignment to constant variable.
+    at <anonymous>:1:5
+(anonymous) @ VM3512:1
+const dd = [10,20,30,40,50];
+undefined
+dd;
+(5) [10, 20, 30, 40, 50]
+dd.push(11111);
+6
+dd;
+(6) [10, 20, 30, 40, 50, 11111]
+dd = [];
+VM3661:1 Uncaught TypeError: Assignment to constant variable.
+    at <anonymous>:1:4
+(anonymous) @ VM3661:1
+const obj = {id:1001, name:'Amit'};
+undefined
+obj.id++;
+1001
+obj;
+{id: 1002, name: "Amit"}
+obj = {};
+VM3779:1 Uncaught TypeError: Assignment to constant variable.
+    at <anonymous>:1:5
+(anonymous) @ VM3779:1
+var arr = [10,20,30,40,50,10,20];
+undefined
+function printIt(element){
+    console.log(element);
+}
+arr.forEach(printIt);
+VM3965:2 10
+VM3965:2 20
+VM3965:2 30
+VM3965:2 40
+VM3965:2 50
+VM3965:2 10
+VM3965:2 20
+undefined
+const printArr =(element)=>console.log(element);
+arr.forEach(printArr);
+VM4009:1 10
+VM4009:1 20
+VM4009:1 30
+VM4009:1 40
+VM4009:1 50
+VM4009:1 10
+VM4009:1 20
+undefined
+//const printArr =(element)=>console.log(element);
+arr.forEach((element)=>console.log(element));
+VM4021:2 10
+VM4021:2 20
+VM4021:2 30
+VM4021:2 40
+VM4021:2 50
+VM4021:2 10
+VM4021:2 20
+undefined
+//const printArr =(element)=>console.log(element);
+arr.forEach(element=>console.log(element));
+VM4037:2 10
+VM4037:2 20
+VM4037:2 30
+VM4037:2 40
+VM4037:2 50
+VM4037:2 10
+VM4037:2 20
+undefined
+//const printArr =(element)=>console.log(element);
+arr.forEach((element,index)=>console.log(element,index));
+VM4077:2 10 0
+VM4077:2 20 1
+VM4077:2 30 2
+VM4077:2 40 3
+VM4077:2 50 4
+VM4077:2 10 5
+VM4077:2 20 6
+undefined
+//const printArr =(element)=>console.log(element);
+arr.forEach((element,index,a)=>console.log(element,index,a));
+VM4094:2 10 0 (7) [10, 20, 30, 40, 50, 10, 20]
+VM4094:2 20 1 (7) [10, 20, 30, 40, 50, 10, 20]
+VM4094:2 30 2 (7) [10, 20, 30, 40, 50, 10, 20]
+VM4094:2 40 3 (7) [10, 20, 30, 40, 50, 10, 20]
+VM4094:2 50 4 (7) [10, 20, 30, 40, 50, 10, 20]
+VM4094:2 10 5 (7) [10, 20, 30, 40, 50, 10, 20]
+VM4094:2 20 6 (7) [10, 20, 30, 40, 50, 10, 20]
+undefined
+
+arr.forEach((x,y,z)=>console.log(x,y,z));
+VM4126:2 10 0 (7) [10, 20, 30, 40, 50, 10, 20]
+VM4126:2 20 1 (7) [10, 20, 30, 40, 50, 10, 20]
+VM4126:2 30 2 (7) [10, 20, 30, 40, 50, 10, 20]
+VM4126:2 40 3 (7) [10, 20, 30, 40, 50, 10, 20]
+VM4126:2 50 4 (7) [10, 20, 30, 40, 50, 10, 20]
+VM4126:2 10 5 (7) [10, 20, 30, 40, 50, 10, 20]
+VM4126:2 20 6 (7) [10, 20, 30, 40, 50, 10, 20]
+undefined
+
+arr.forEach((x,y,z)=>console.log(x));
+VM4149:2 10
+VM4149:2 20
+VM4149:2 30
+VM4149:2 40
+VM4149:2 50
+VM4149:2 10
+VM4149:2 20
+undefined
+arr;
+(7) [10, 20, 30, 40, 50, 10, 20]
+arr.find(element=>element==30);
+30
+arr.find(element=>element==300);
+undefined
+arr.find(element=>element==300)?'Found':'Not Found';
+"Not Found"
+arr.find(element=>element==30)?'Found':'Not Found';
+"Found"
+arr.findIndex(element=>element==30);
+2
+arr.findIndex(element=>element==300);
+-1
+arr.filter(element=>element>=30);
+(3) [30, 40, 50]
+arr;
+(7) [10, 20, 30, 40, 50, 10, 20]
+arr.filter(element=>element>=300);
+[]
+var prices = [90,100,55,444,888.20,666.10];
+undefined
+prices.map(price=>price + price * 0.10);
+(6) [99, 110, 60.5, 488.4, 977.0200000000001, 732.71]
+prices;
+(6) [90, 100, 55, 444, 888.2, 666.1]
+var pricesWithTax = prices.map(price=>price + price * 0.10);
+undefined
+pricesWithTax;
+(6) [99, 110, 60.5, 488.4, 977.0200000000001, 732.71]
+prices;
+(6) [90, 100, 55, 444, 888.2, 666.1]
+var f = 9999;
+undefined
+f.toLocaleString('hi-IN');
+"9,999"
+var formattedPrices = prices.map(price=>`Rs ${price.toLocaleString('hi-IN')}`);
+undefined
+formattedPrices;
+(6) ["Rs 90", "Rs 100", "Rs 55", "Rs 444", "Rs 888.2", "Rs 666.1"]
+prices;
+(6) [90, 100, 55, 444, 888.2, 666.1]
+prices;
+(6) [90, 100, 55, 444, 888.2, 666.1]
+prices.sort((first, second)=>first - second);
+(6) [55, 90, 100, 444, 666.1, 888.2]
+prices;
+(6) [55, 90, 100, 444, 666.1, 888.2]
+prices.sort((first, second)=>second - first);
+(6) [888.2, 666.1, 444, 100, 90, 55]
+10<20;
+true
+var names = ["anil","sunil","ram","amit","shyam"];
+undefined
+String.prototype.toLocaleCompare
+undefined
+String.prototype.localeCompare
+ƒ localeCompare() { [native code] }
+"amit".localeCompare("ram");
+-1
+"ram".localeCompare("amit");
+1
+"amit".localeCompare("amit");
+0
+names;
+(5) ["anil", "sunil", "ram", "amit", "shyam"]
+names.sort((first, second)=>first.localeCompare(second));
+(5) ["amit", "anil", "ram", "shyam", "sunil"]
+names.sort((first, second)=>second.localeCompare(first));
+(5) ["sunil", "shyam", "ram", "anil", "amit"]
+prices;
+(6) [888.2, 666.1, 444, 100, 90, 55]
+let sum = 0;
+for(let i = 0 ; i<prices.length; i++){
+sum+=prices[i];
+}
+console.log(sum);
+VM6443:5 2243.3
+undefined
+prices.reduce((acc,element)=>acc+element,acc=0);
+2243.3
+prices;
+(6) [888.2, 666.1, 444, 100, 90, 55]
+prices.filter(price=>price>400);
+(3) [888.2, 666.1, 444]
+prices.reduce((acc,element)=>{
+if(element>400){
+acc.push(element);
+}
+return acc;
+},acc=[]);
+(3) [888.2, 666.1, 444]
+prices;
+(6) [888.2, 666.1, 444, 100, 90, 55]
+prices.any
+undefined
+prices.some
+ƒ some() { [native code] }
+prices.some(price=>price>500);
+true
+prices.every(price=>price>500);
+false
+prices.reduce((acc,element)=>{
+if(element>400){
+acc.push(element);
+}
+//return acc;
+},acc=[]);
+VM7060:3 Uncaught TypeError: Cannot read property 'push' of undefined
+    at prices.reduce.acc (<anonymous>:3:5)
+    at Array.reduce (<anonymous>)
+    at <anonymous>:1:8
+prices.reduce.acc @ VM7060:3
+(anonymous) @ VM7060:1
+const w = ()=>10000;
+undefined
+w();
+10000
