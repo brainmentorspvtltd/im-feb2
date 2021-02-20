@@ -1,0 +1,49 @@
+class Person{
+    constructor(name, age, city){
+    this.name = name;
+    this.age = age;
+    this.city = city;
+}
+print(){
+console.log(`Name ${this.name} Age is ${this.age} City is ${this.city}`);
+}
+}
+class Employee extends Person{
+    #iamprivate(){
+}
+    static callMe(){
+    console.log('Employee Call Me ');
+}
+    constructor(id, cname, salary, name, age){
+    super(name,age, "Delhi");
+    this.id = id;
+    this.cname = cname;
+this.salary = salary;
+}
+print(){
+    super.print();
+    console.log(`Id is ${this.id} Company Name ${this.cname} Salary is ${this.salary}`);
+}
+}
+undefined
+var ram = new Employee(1001, "HCL",88888,"Ram",21);
+undefined
+ram.print();
+VM910:8 Name Ram Age is 21 City is Delhi
+VM910:25 Id is 1001 Company Name HCL Salary is 88888
+undefined
+Employee.callMe();
+VM910:15 Employee Call Me 
+undefined
+typeof Employee;
+"function"
+typeof Person;
+"function"
+if(10>2){
+Person.prototype.disp= function(){
+console.log('Disp ');
+}
+}
+ƒ (){
+console.log('Disp ');
+}

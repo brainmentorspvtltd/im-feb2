@@ -1,0 +1,144 @@
+function whoAmI(){
+console.log("I am ",this.name);
+}
+undefined
+var name = "Amit";
+undefined
+window.name;
+"Amit"
+window.whoAmI();
+VM126:2 I am  Amit
+undefined
+this;
+Window {window: Window, self: Window, document: document, name: "Amit", location: Location, …}
+this == window;
+true
+var obj = {name:'Ram'};
+undefined
+window.obj.name;
+"Ram"
+obj.whoAmI;
+undefined
+whoAmI.call(obj);
+VM126:2 I am  Ram
+undefined
+whoAmI();
+VM126:2 I am  Amit
+undefined
+whoAmI();
+VM126:2 I am  Amit
+undefined
+function whoAmI(x,y){
+console.log("I am ",this.name,x,y);
+}
+undefined
+whoAmI(100,200); // window.whoAmI(100,200);
+VM609:2 I am  Amit 100 200
+undefined
+window.name;
+"Amit"
+whoAmI.call(obj,10000,20000);
+VM609:2 I am  Ram 10000 20000
+undefined
+var arr = [1000,2000];
+whoAmI.apply(obj,arr);
+VM609:2 I am  Ram 1000 2000
+undefined
+var arr2 =[100,200,300,400,500]; 
+undefined
+var [x,y] = arr2;
+undefined
+x;
+100
+y;
+200
+x = arr[0];
+1000
+var [x,,,y] = arr2;
+undefined
+x;
+100
+y;
+400
+function test2([a,b]){
+console.log(a,b);
+}
+undefined
+test2(arr2);
+VM1316:2 100 200
+undefined
+var obj = {id:1001, name:'Ram',city:'Delhi'};
+undefined
+var {name, city} = obj;
+undefined
+name;
+"Ram"
+city;
+"Delhi"
+function test3({id, city}){
+    console.log(id, city);
+}
+test3(obj);
+VM1602:2 1001 "Delhi"
+undefined
+var [a,b] = [100,200];
+undefined
+a;
+100
+b;
+200
+[a,b] = [b,a];
+(2) [200, 100]
+a;
+200
+b;
+100
+whoAmI(1000,2000);
+VM609:2 I am  Ram 1000 2000
+undefined
+var f2 = whoAmI.bind(obj);
+undefined
+f2(100,200);
+VM609:2 I am  Ram 100 200
+undefined
+f2(100,200);
+VM609:2 I am  Ram 100 200
+undefined
+f2(100,200);
+VM609:2 I am  Ram 100 200
+undefined
+f2(100,200);
+VM609:2 I am  Ram 100 200
+undefined
+whoAmI();
+VM609:2 I am  Ram undefined undefined
+undefined
+name;
+"Ram"
+name = "Amit";
+"Amit"
+whoAmI();
+VM609:2 I am  Amit undefined undefined
+undefined
+whoAmI(100,200);
+VM609:2 I am  Amit 100 200
+undefined
+window.name;
+"Amit"
+window.whoAmI();
+VM609:2 I am  Amit undefined undefined
+undefined
+window.whoAmI(100,200);
+VM609:2 I am  Amit 100 200
+undefined
+var ff = whoAmI.bind(obj);
+undefined
+whoAmI(10,20);
+VM609:2 I am  Amit 10 20
+undefined
+ff(1000,2000);
+VM609:2 I am  Ram 1000 2000
+undefined
+whoAmI(10,20);
+VM609:2 I am  Amit 10 20
+undefined

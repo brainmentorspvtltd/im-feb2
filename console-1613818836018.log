@@ -1,0 +1,413 @@
+function Person(name, age, address){
+    this.name = name;
+    this.age = age;
+    this.address = address;
+}
+Person.prototype.print = function(){
+console.log(`Age is ${this.age} Name is ${this.name} Address is ${this.address}`);
+}
+function Employee (id, cname, salary){
+    this.id = id;
+    this.cname = cname;
+    this.salary = salary;
+}
+Employee.prototype.print=function(){
+    console.log(`Id is ${this.id} Company Name is ${this.cname} Salary is ${this.salary}`);
+}
+ƒ (){
+    console.log(`Id is ${this.id} Company Name is ${this.cname} Salary is ${this.salary}`);
+}
+Employee.prototype;
+{print: ƒ, constructor: ƒ}print: ƒ ()constructor: ƒ Employee(id, cname, salary)__proto__: Objectconstructor: ƒ Object()hasOwnProperty: ƒ hasOwnProperty()isPrototypeOf: ƒ isPrototypeOf()propertyIsEnumerable: ƒ propertyIsEnumerable()toLocaleString: ƒ toLocaleString()toString: ƒ toString()valueOf: ƒ valueOf()__defineGetter__: ƒ __defineGetter__()__defineSetter__: ƒ __defineSetter__()__lookupGetter__: ƒ __lookupGetter__()__lookupSetter__: ƒ __lookupSetter__()get __proto__: ƒ __proto__()set __proto__: ƒ __proto__()
+function Person(name, age, address){
+    this.name = name;
+    this.age = age;
+    this.address = address;
+}
+Person.prototype.print = function(){
+console.log(`Age is ${this.age} Name is ${this.name} Address is ${this.address}`);
+}
+function Employee (id, cname, salary){
+    this.id = id;
+    this.cname = cname;
+    this.salary = salary;
+}
+Employee.prototype.print=function(){
+    console.log(`Id is ${this.id} Company Name is ${this.cname} Salary is ${this.salary}`);
+}
+Employee.prototype.__proto__ = Person.prototype;
+{print: ƒ, constructor: ƒ}
+Employee.prototype
+Person {print: ƒ, constructor: ƒ}print: ƒ ()constructor: ƒ Employee(id, cname, salary)__proto__: print: ƒ ()constructor: ƒ Person(name, age, address)__proto__: constructor: ƒ Object()hasOwnProperty: ƒ hasOwnProperty()isPrototypeOf: ƒ isPrototypeOf()propertyIsEnumerable: ƒ propertyIsEnumerable()toLocaleString: ƒ toLocaleString()toString: ƒ toString()valueOf: ƒ valueOf()__defineGetter__: ƒ __defineGetter__()__defineSetter__: ƒ __defineSetter__()__lookupGetter__: ƒ __lookupGetter__()__lookupSetter__: ƒ __lookupSetter__()get __proto__: ƒ __proto__()set __proto__: ƒ __proto__()
+var ram = new Employee(1001, "TCS",9999);
+undefined
+ram;
+Employee {id: 1001, cname: "TCS", salary: 9999}
+ram.print();
+VM895:15 Id is 1001 Company Name is TCS Salary is 9999
+undefined
+function Person(name, age, address){
+    this.name = name;
+    this.age = age;
+    this.address = address;
+}
+Person.prototype.print = function(){
+console.log(`Age is ${this.age} Name is ${this.name} Address is ${this.address}`);
+}
+function Employee (id, cname, salary){
+    this.id = id;
+    this.cname = cname;
+    this.salary = salary;
+}
+Employee.prototype.print=function(){
+    this.print();
+    console.log(`Id is ${this.id} Company Name is ${this.cname} Salary is ${this.salary}`);
+}
+Employee.prototype.__proto__ = Person.prototype;
+{print: ƒ, constructor: ƒ}
+var ram = new Employee(1001, "TCS",9999);
+undefined
+ram.print();
+VM1097:15 Uncaught RangeError: Maximum call stack size exceeded
+    at Employee.print (<anonymous>:15:10)
+    at Employee.print (<anonymous>:15:10)
+    at Employee.print (<anonymous>:15:10)
+    at Employee.print (<anonymous>:15:10)
+    at Employee.print (<anonymous>:15:10)
+    at Employee.print (<anonymous>:15:10)
+    at Employee.print (<anonymous>:15:10)
+    at Employee.print (<anonymous>:15:10)
+    at Employee.print (<anonymous>:15:10)
+    at Employee.print (<anonymous>:15:10)
+Employee.print @ VM1097:15
+Employee.print @ VM1097:15
+Employee.print @ VM1097:15
+Employee.print @ VM1097:15
+Employee.print @ VM1097:15
+Employee.print @ VM1097:15
+Employee.print @ VM1097:15
+Employee.print @ VM1097:15
+Employee.print @ VM1097:15
+Employee.print @ VM1097:15
+Employee.print @ VM1097:15
+Employee.print @ VM1097:15
+Employee.print @ VM1097:15
+Employee.print @ VM1097:15
+Employee.print @ VM1097:15
+Employee.print @ VM1097:15
+Employee.print @ VM1097:15
+Employee.print @ VM1097:15
+Employee.print @ VM1097:15
+Employee.print @ VM1097:15
+Employee.print @ VM1097:15
+Employee.print @ VM1097:15
+Employee.print @ VM1097:15
+Employee.print @ VM1097:15
+Employee.print @ VM1097:15
+Employee.print @ VM1097:15
+Employee.print @ VM1097:15
+Employee.print @ VM1097:15
+Employee.print @ VM1097:15
+Employee.print @ VM1097:15
+Employee.print @ VM1097:15
+Employee.print @ VM1097:15
+Employee.print @ VM1097:15
+Employee.print @ VM1097:15
+Employee.print @ VM1097:15
+Employee.print @ VM1097:15
+Employee.print @ VM1097:15
+Employee.print @ VM1097:15
+Employee.print @ VM1097:15
+Employee.print @ VM1097:15
+Employee.print @ VM1097:15
+Employee.print @ VM1097:15
+Employee.print @ VM1097:15
+Employee.print @ VM1097:15
+Employee.print @ VM1097:15
+Employee.print @ VM1097:15
+Employee.print @ VM1097:15
+Employee.print @ VM1097:15
+Employee.print @ VM1097:15
+Employee.print @ VM1097:15
+Employee.print @ VM1097:15
+Employee.print @ VM1097:15
+Employee.print @ VM1097:15
+Employee.print @ VM1097:15
+Employee.print @ VM1097:15
+Employee.print @ VM1097:15
+Employee.print @ VM1097:15
+Employee.print @ VM1097:15
+Employee.print @ VM1097:15
+Employee.print @ VM1097:15
+Employee.print @ VM1097:15
+Employee.print @ VM1097:15
+Employee.print @ VM1097:15
+Employee.print @ VM1097:15
+Employee.print @ VM1097:15
+Employee.print @ VM1097:15
+Employee.print @ VM1097:15
+Employee.print @ VM1097:15
+Employee.print @ VM1097:15
+Employee.print @ VM1097:15
+Employee.print @ VM1097:15
+Employee.print @ VM1097:15
+Employee.print @ VM1097:15
+Employee.print @ VM1097:15
+Employee.print @ VM1097:15
+Employee.print @ VM1097:15
+Employee.print @ VM1097:15
+Employee.print @ VM1097:15
+Employee.print @ VM1097:15
+Employee.print @ VM1097:15
+Employee.print @ VM1097:15
+Employee.print @ VM1097:15
+Employee.print @ VM1097:15
+Employee.print @ VM1097:15
+Employee.print @ VM1097:15
+Employee.print @ VM1097:15
+Employee.print @ VM1097:15
+Employee.print @ VM1097:15
+Employee.print @ VM1097:15
+Employee.print @ VM1097:15
+Employee.print @ VM1097:15
+Employee.print @ VM1097:15
+Employee.print @ VM1097:15
+Employee.print @ VM1097:15
+Employee.print @ VM1097:15
+Employee.print @ VM1097:15
+Employee.print @ VM1097:15
+Employee.print @ VM1097:15
+Employee.print @ VM1097:15
+Employee.print @ VM1097:15
+Employee.print @ VM1097:15
+Employee.print @ VM1097:15
+Employee.print @ VM1097:15
+Employee.print @ VM1097:15
+Employee.print @ VM1097:15
+Employee.print @ VM1097:15
+Employee.print @ VM1097:15
+Employee.print @ VM1097:15
+Employee.print @ VM1097:15
+Employee.print @ VM1097:15
+Employee.print @ VM1097:15
+Employee.print @ VM1097:15
+Employee.print @ VM1097:15
+Employee.print @ VM1097:15
+Employee.print @ VM1097:15
+Employee.print @ VM1097:15
+Employee.print @ VM1097:15
+Employee.print @ VM1097:15
+Employee.print @ VM1097:15
+Employee.print @ VM1097:15
+Employee.print @ VM1097:15
+Employee.print @ VM1097:15
+Employee.print @ VM1097:15
+Employee.print @ VM1097:15
+Employee.print @ VM1097:15
+Employee.print @ VM1097:15
+Employee.print @ VM1097:15
+Employee.print @ VM1097:15
+Employee.print @ VM1097:15
+Employee.print @ VM1097:15
+Employee.print @ VM1097:15
+Employee.print @ VM1097:15
+Employee.print @ VM1097:15
+Employee.print @ VM1097:15
+Employee.print @ VM1097:15
+Employee.print @ VM1097:15
+Employee.print @ VM1097:15
+Employee.print @ VM1097:15
+Employee.print @ VM1097:15
+Employee.print @ VM1097:15
+Employee.print @ VM1097:15
+Employee.print @ VM1097:15
+Employee.print @ VM1097:15
+Employee.print @ VM1097:15
+Employee.print @ VM1097:15
+Employee.print @ VM1097:15
+Employee.print @ VM1097:15
+Employee.print @ VM1097:15
+Employee.print @ VM1097:15
+Employee.print @ VM1097:15
+Employee.print @ VM1097:15
+Employee.print @ VM1097:15
+Employee.print @ VM1097:15
+Employee.print @ VM1097:15
+Employee.print @ VM1097:15
+Employee.print @ VM1097:15
+Employee.print @ VM1097:15
+Employee.print @ VM1097:15
+Employee.print @ VM1097:15
+Employee.print @ VM1097:15
+Employee.print @ VM1097:15
+Employee.print @ VM1097:15
+Employee.print @ VM1097:15
+Employee.print @ VM1097:15
+Employee.print @ VM1097:15
+Employee.print @ VM1097:15
+Employee.print @ VM1097:15
+Employee.print @ VM1097:15
+Employee.print @ VM1097:15
+Employee.print @ VM1097:15
+Employee.print @ VM1097:15
+Employee.print @ VM1097:15
+Employee.print @ VM1097:15
+Employee.print @ VM1097:15
+Employee.print @ VM1097:15
+Employee.print @ VM1097:15
+Employee.print @ VM1097:15
+Employee.print @ VM1097:15
+Employee.print @ VM1097:15
+Employee.print @ VM1097:15
+Employee.print @ VM1097:15
+Employee.print @ VM1097:15
+Employee.print @ VM1097:15
+Employee.print @ VM1097:15
+Employee.print @ VM1097:15
+Employee.print @ VM1097:15
+Employee.print @ VM1097:15
+Employee.print @ VM1097:15
+Employee.print @ VM1097:15
+Employee.print @ VM1097:15
+Employee.print @ VM1097:15
+Employee.print @ VM1097:15
+Employee.print @ VM1097:15
+Employee.print @ VM1097:15
+Employee.print @ VM1097:15
+Employee.print @ VM1097:15
+Employee.print @ VM1097:15
+Employee.print @ VM1097:15
+Employee.print @ VM1097:15
+Employee.print @ VM1097:15
+Show 170 more frames
+function Person(name, age, address){
+    this.name = name;
+    this.age = age;
+    this.address = address;
+}
+Person.prototype.printPerson = function(){
+console.log(`Age is ${this.age} Name is ${this.name} Address is ${this.address}`);
+}
+function Employee (id, cname, salary){
+    this.id = id;
+    this.cname = cname;
+    this.salary = salary;
+}
+Employee.prototype.print=function(){
+    this.printPerson();
+    console.log(`Id is ${this.id} Company Name is ${this.cname} Salary is ${this.salary}`);
+}
+Employee.prototype.__proto__ = Person.prototype;
+{printPerson: ƒ, constructor: ƒ}
+var ram = new Employee(1001, "TCS",9999);
+undefined
+ram.print();
+VM1141:7 Age is undefined Name is undefined Address is undefined
+VM1141:16 Id is 1001 Company Name is TCS Salary is 9999
+undefined
+function Person(name, age, address){
+    this.name = name;
+    this.age = age;
+    this.address = address;
+}
+Person.prototype.printPerson = function(){
+console.log(`Age is ${this.age} Name is ${this.name} Address is ${this.address}`);
+}
+function Employee (id, cname, salary, name,age, address){
+    Person.call(this,name,age, address);
+    this.id = id;
+    this.cname = cname;
+    this.salary = salary;
+}
+Employee.prototype.print=function(){
+    this.printPerson();
+    console.log(`Id is ${this.id} Company Name is ${this.cname} Salary is ${this.salary}`);
+}
+Employee.prototype.__proto__ = Person.prototype;
+{printPerson: ƒ, constructor: ƒ}
+var ram = new Employee(1001, "TCS",9999);
+undefined
+ram.print();
+VM1293:7 Age is undefined Name is undefined Address is undefined
+VM1293:17 Id is 1001 Company Name is TCS Salary is 9999
+undefined
+var ram = new Employee(1001, "TCS",9999,"Ram",21,"Delhi");
+undefined
+ram.print();
+VM1293:7 Age is 21 Name is Ram Address is Delhi
+VM1293:17 Id is 1001 Company Name is TCS Salary is 9999
+undefined
+function Person(name, age, address){
+    console.log('Person this ',this);
+    this.name = name;
+    this.age = age;
+    this.address = address;
+}
+Person.prototype.printPerson = function(){
+console.log(`Age is ${this.age} Name is ${this.name} Address is ${this.address}`);
+}
+function Employee (id, cname, salary, name,age, address){
+    Person.call(this,name,age, address);
+    console.log('Employee ',this);
+    this.id = id;
+    this.cname = cname;
+    this.salary = salary;
+}
+Employee.prototype.print=function(){
+    this.printPerson();
+    console.log(`Id is ${this.id} Company Name is ${this.cname} Salary is ${this.salary}`);
+}
+Employee.prototype.__proto__ = Person.prototype;
+{printPerson: ƒ, constructor: ƒ}
+var ram = new Employee(1001, "TCS",9999,"Ram",21,"Delhi");
+VM1460:2 Person this  Employee {}address: "Delhi"age: 21cname: "TCS"id: 1001name: "Ram"salary: 9999__proto__: Person
+VM1460:12 Employee  Employee {name: "Ram", age: 21, address: "Delhi"}address: "Delhi"age: 21cname: "TCS"id: 1001name: "Ram"salary: 9999__proto__: Person
+undefined
+function Person(name, age, address){
+    console.log('Person this ',this);
+    this.name = name;
+    this.age = age;
+    this.address = address;
+}
+Person.prototype.printPerson = function(){
+console.log(`Age is ${this.age} Name is ${this.name} Address is ${this.address}`);
+}
+function Employee (id, cname, salary, name,age, address){
+    Person.call(this,name,age, address);
+    console.log('Employee ',this);
+    this.id = id;
+    this.cname = cname;
+    this.salary = salary;
+console.log('Employee Final ',this);
+}
+Employee.prototype.print=function(){
+    this.printPerson();
+    console.log(`Id is ${this.id} Company Name is ${this.cname} Salary is ${this.salary}`);
+}
+Employee.prototype.__proto__ = Person.prototype;
+{printPerson: ƒ, constructor: ƒ}
+var ram = new Employee(1001, "TCS",9999,"Ram",21,"Delhi");
+VM1495:2 Person this  Employee {}
+VM1495:12 Employee  Employee {name: "Ram", age: 21, address: "Delhi"}
+VM1495:16 Employee Final  Employee {name: "Ram", age: 21, address: "Delhi", id: 1001, cname: "TCS", …}
+undefined
+Employee(1001,"gsdgdg");
+VM1495:2 Person this  Window {window: Window, self: Window, document: document, name: "", location: Location, …}
+VM1495:12 Employee  Window {window: Window, self: Window, document: document, name: "undefined", location: Location, …}
+VM1495:16 Employee Final  Window {window: Window, self: Window, document: document, name: "undefined", location: Location, …}
+undefined
+new Employee();
+VM1495:2 Person this  Employee {}
+VM1495:12 Employee  Employee {name: undefined, age: undefined, address: undefined}
+VM1495:16 Employee Final  Employee {name: undefined, age: undefined, address: undefined, id: undefined, cname: undefined, …}
+Employee {name: undefined, age: undefined, address: undefined, id: undefined, cname: undefined, …}
+var myProtoType = {Employee.prototype};
+VM1787:1 Uncaught SyntaxError: Unexpected token '.'
+var myProtoType = {p1:Employee.prototype};
+undefined
+myProtoType.p2 = Parent.prototype;
+VM1874:1 Uncaught ReferenceError: Parent is not defined
+    at <anonymous>:1:18
+(anonymous) @ VM1874:1
+myProtoType.p2 = Person.prototype;
+{printPerson: ƒ, constructor: ƒ}
