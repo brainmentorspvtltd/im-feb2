@@ -1,0 +1,231 @@
+var obj = {};
+undefined
+obj;
+{}__proto__: constructor: ƒ Object()hasOwnProperty: ƒ hasOwnProperty()isPrototypeOf: ƒ isPrototypeOf()propertyIsEnumerable: ƒ propertyIsEnumerable()toLocaleString: ƒ toLocaleString()toString: ƒ toString()valueOf: ƒ valueOf()__defineGetter__: ƒ __defineGetter__()__defineSetter__: ƒ __defineSetter__()__lookupGetter__: ƒ __lookupGetter__()__lookupSetter__: ƒ __lookupSetter__()get __proto__: ƒ __proto__()set __proto__: ƒ __proto__()
+obj.__proto__;
+{constructor: ƒ, __defineGetter__: ƒ, __defineSetter__: ƒ, hasOwnProperty: ƒ, __lookupGetter__: ƒ, …}
+obj.__proto__ ==Object.prototype;
+true
+var obj = {id:1001, name:'Ram'};
+undefined
+obj.id;
+1001
+obj.name;
+"Ram"
+typeof obj;
+"object"
+obj instanceof Object;
+true
+obj;
+{id: 1001, name: "Ram"}id: 1001name: "Ram"__proto__: Object
+obj.salary = 33333;
+33333
+obj;
+{id: 1001, name: "Ram", salary: 33333}
+obj.1 = true;
+VM486:1 Uncaught SyntaxError: Unexpected number
+obj[1]= true;
+true
+var obj = {id:1001, name:'Ram',1:true, 2:true, 3:false};
+undefined
+obj.id;
+1001
+obj.1;
+VM659:1 Uncaught SyntaxError: Unexpected number
+obj[1];
+true
+obj[3];
+false
+var obj = {id:1001, name:'Ram',1:true, 2:true, 3:false,a-b:true};
+VM731:1 Uncaught SyntaxError: Unexpected token '-'
+var obj = {id:1001, name:'Ram',1:true, 2:true, 3:false,"a-b":true};
+undefined
+obj.a-b;
+VM768:1 Uncaught ReferenceError: b is not defined
+    at <anonymous>:1:7
+(anonymous) @ VM768:1
+obj["a-b"];
+true
+obj;
+{1: true, 2: true, 3: false, id: 1001, name: "Ram", a-b: true}
+obj.salary = 43434;
+43434
+obj.bonus=222;
+222
+obj;
+{1: true, 2: true, 3: false, id: 1001, name: "Ram", a-b: true, salary: 43434, bonus: 222}
+delete obj.bonus;
+true
+obj;
+{1: true, 2: true, 3: false, id: 1001, name: "Ram", a-b: true, salary: 43434}
+delete obj.salary;
+true
+obj;
+{1: true, 2: true, 3: false, id: 1001, name: "Ram", a-b: true}
+var customer = {id:1001, name:'Amit',balance :22222};
+undefined
+var customer2 = {id:1002, name:'Shyam',balance :22222};
+undefined
+function createCustomer(id, name, balance){
+    var customer = {};
+    customer.id = id;
+    customer.name = name;
+    customer.balance = balance;
+    return customer;
+}
+undefined
+var ram= createCustomer(1001,"Ram",43434);
+undefined
+ram;
+{id: 1001, name: "Ram", balance: 43434}balance: 43434id: 1001name: "Ram"__proto__: Object
+var shyam = createCustomer(1002, "Shyam",32323);
+undefined
+shyam;
+{id: 1002, name: "Shyam", balance: 32323}balance: 32323id: 1002name: "Shyam"__proto__: Object
+function Customer(id, name, balance){
+    
+    this.id = id;
+    this.name = name;
+    this.balance = balance;
+   
+}
+var amit = new Customer(1001, "Amit",3333);
+undefined
+amit;
+Customer {id: 1001, name: "Amit", balance: 3333}balance: 3333id: 1001name: "Amit"__proto__: Object
+amit instanceof Customer;
+true
+shyam instanceof createCustomer;
+false
+amit;
+Customer {id: 1001, name: "Amit", balance: 3333}
+shyam;
+{id: 1002, name: "Shyam", balance: 32323}
+amit instanceof Object;
+true
+function Customer(id, name, balance){
+    
+    this.id = id;
+    this.name = name;
+    this.balance = balance;
+    this.print = function(){
+    console.log(`Id is ${this.id} Name is ${this.name} Balance is ${this.balance}`);
+}
+   
+}
+var amit = new Customer(1001, "Amit",3333);
+undefined
+amit;
+Customer {id: 1001, name: "Amit", balance: 3333, print: ƒ}
+amit.print();
+VM2100:7 Id is 1001 Name is Amit Balance is 3333
+undefined
+var shyam = new Customer(1002,"Shyam",32434);
+undefined
+shyam;
+Customer {id: 1002, name: "Shyam", balance: 32434, print: ƒ}balance: 32434id: 1002name: "Shyam"print: ƒ ()__proto__: Object
+typeof Customer;
+"function"
+console.dir(Customer);
+VM2453:1 ƒ Customer(id, name, balance)arguments: nullcaller: nulllength: 3name: "Customer"prototype: {constructor: ƒ}__proto__: ƒ ()[[FunctionLocation]]: VM2100:1[[Scopes]]: Scopes[1]
+undefined
+amit;
+Customer {id: 1001, name: "Amit", balance: 3333, print: ƒ}balance: 3333id: 1001name: "Amit"print: ƒ ()__proto__: Objectconstructor: ƒ Customer(id, name, balance)__proto__: Object
+amit.__proto__==Customer.prototype;
+true
+amit.__proto__.__proto__==Object.prototype;
+true
+Customer.prototype.printIt  = function(){
+console.log(`Id is ${this.id} Name is ${this.name} Balance is ${this.balance}`);
+}
+ƒ (){
+console.log(`Id is ${this.id} Name is ${this.name} Balance is ${this.balance}`);
+}
+var shyam = new Customer(1002,"Shyam",32434);
+undefined
+shyam
+Customer {id: 1002, name: "Shyam", balance: 32434, print: ƒ}balance: 32434id: 1002name: "Shyam"print: ƒ ()__proto__: printIt: ƒ ()constructor: ƒ Customer(id, name, balance)__proto__: Object
+shyam.printIt();
+VM2852:2 Id is 1002 Name is Shyam Balance is 32434
+undefined
+shyam.print();
+VM2100:7 Id is 1002 Name is Shyam Balance is 32434
+undefined
+shyam.__proto__
+{printIt: ƒ, constructor: ƒ}
+Customer.prototype;
+{printIt: ƒ, constructor: ƒ}
+shyam.__proto__ == Customer.prototype;
+true
+shyam.__proto__;
+{printIt: ƒ, constructor: ƒ}
+shyam.__proto__.__proto__;
+{constructor: ƒ, __defineGetter__: ƒ, __defineSetter__: ƒ, hasOwnProperty: ƒ, __lookupGetter__: ƒ, …}
+shyam.__proto__.__proto__.__proto__;
+null
+typeof Customer;
+"function"
+typeof Customer.prototype;
+"object"
+Customer.__proto__
+ƒ () { [native code] }
+Customer.__proto__.__proto__;
+{constructor: ƒ, __defineGetter__: ƒ, __defineSetter__: ƒ, hasOwnProperty: ƒ, __lookupGetter__: ƒ, …}
+Customer.__proto__.__proto__.__proto__;
+null
+Customer.prototype;
+{printIt: ƒ, constructor: ƒ}
+Customer.prototype.constructor
+ƒ Customer(id, name, balance){
+    
+    this.id = id;
+    this.name = name;
+    this.balance = balance;
+    this.print = function(){
+    console.log(`Id is ${this.id} Name is ${this.name} Balance is ${…
+Customer.__proto__
+ƒ () { [native code] }
+console.dir(Customer);
+VM3639:1 ƒ Customer(id, name, balance)arguments: nullcaller: nulllength: 3name: "Customer"prototype: {printIt: ƒ, constructor: ƒ}__proto__: ƒ ()apply: ƒ apply()arguments: (...)bind: ƒ bind()call: ƒ call()caller: (...)constructor: ƒ Function()length: 0name: ""toString: ƒ toString()Symbol(Symbol.hasInstance): ƒ [Symbol.hasInstance]()get arguments: ƒ ()set arguments: ƒ ()get caller: ƒ ()set caller: ƒ ()__proto__: Object[[FunctionLocation]]: <unknown>[[Scopes]]: Scopes[0][[FunctionLocation]]: VM2100:1[[Scopes]]: Scopes[1]
+undefined
+Customer.__proto__;
+ƒ () { [native code] }
+typeof Customer.__proto__;
+"function"
+console.dir(Customer);
+VM3763:1 ƒ Customer(id, name, balance)arguments: nullcaller: nulllength: 3name: "Customer"prototype: {printIt: ƒ, constructor: ƒ}__proto__: ƒ ()apply: ƒ apply()arguments: (...)bind: ƒ bind()call: ƒ call()caller: (...)constructor: ƒ Function()length: 0name: ""toString: ƒ toString()Symbol(Symbol.hasInstance): ƒ [Symbol.hasInstance]()get arguments: ƒ ()set arguments: ƒ ()get caller: ƒ ()set caller: ƒ ()__proto__: constructor: ƒ Object()hasOwnProperty: ƒ hasOwnProperty()isPrototypeOf: ƒ isPrototypeOf()propertyIsEnumerable: ƒ propertyIsEnumerable()toLocaleString: ƒ toLocaleString()toString: ƒ toString()valueOf: ƒ valueOf()__defineGetter__: ƒ __defineGetter__()__defineSetter__: ƒ __defineSetter__()__lookupGetter__: ƒ __lookupGetter__()__lookupSetter__: ƒ __lookupSetter__()get __proto__: ƒ __proto__()set __proto__: ƒ __proto__()[[FunctionLocation]]: <unknown>[[Scopes]]: Scopes[0][[FunctionLocation]]: VM2100:1[[Scopes]]: Scopes[1]
+undefined
+Array.prototype;
+[constructor: ƒ, concat: ƒ, copyWithin: ƒ, fill: ƒ, find: ƒ, …]
+typeof Array.prototype;
+"object"
+Customer.prototype
+{printIt: ƒ, constructor: ƒ}
+ram;
+{id: 1001, name: "Ram", balance: 43434}
+shyam;
+Customer {id: 1002, name: "Shyam", balance: 32434, print: ƒ}
+shyam
+Customer {id: 1002, name: "Shyam", balance: 32434, print: ƒ}balance: 32434id: 1002name: "Shyam"print: ƒ ()__proto__: printIt: ƒ ()constructor: ƒ Customer(id, name, balance)__proto__: Object
+shyam.__proto__.constructor
+ƒ Customer(id, name, balance){
+    
+    this.id = id;
+    this.name = name;
+    this.balance = balance;
+    this.print = function(){
+    console.log(`Id is ${this.id} Name is ${this.name} Balance is ${…
+shyam.__proto__.__proto__;
+{constructor: ƒ, __defineGetter__: ƒ, __defineSetter__: ƒ, hasOwnProperty: ƒ, __lookupGetter__: ƒ, …}
+shyam.__proto__.__proto__.constructor;
+ƒ Object() { [native code] }
+Customer.__proto__;
+ƒ () { [native code] }
+typeof Customer.__proto__;
+"function"
+Customer.__proto__ == Object.prototype;
+false
+Customer.__proto__.__proto__ == Object.prototype;
+true
+shyam;
+Customer {id: 1002, name: "Shyam", balance: 32434, print: ƒ}
