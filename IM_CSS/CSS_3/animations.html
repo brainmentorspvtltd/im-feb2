@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            display: inline-block;
+            height: 300px;
+            width: 300px;
+            border: 20px solid red;
+            /* margin: 0 auto; */
+            margin-right: 20px;
+            overflow: hidden;
+            box-shadow: 10px 10px 20px 0px black;
+            /* transform: translateX(-100%); */
+        }
+        .box_1 {
+            animation-name: anim_1;
+            animation-duration: 2s;
+        }
+        .box_2 {
+            animation-name: anim_2;
+            animation-duration: 2s;
+        }
+        .box_3 {
+            animation-name: anim_3;
+            animation-duration: 2s;
+        }
+
+        @keyframes anim_1 {
+            from {
+                transform: translateX(-100%);
+            }
+            to {
+                transform: translateX(0%);
+            }
+        }
+
+        @keyframes anim_2 {
+            from {
+                transform: translateY(-100%);
+            }
+            to {
+                transform: translateY(0%);
+            }
+        }
+
+        @keyframes anim_3 {
+            from {
+                transform: translateX(100%);
+            }
+            to {
+                transform: translateX(0%);
+            }
+        }
+        img {
+            width: 100%;
+            transition-duration: 5s;
+        }
+        
+    </style>
+</head>
+<body>
+
+    <h1>Animations</h1>
+
+    <div class="box_1">
+        <img src="https://st2.cricketcountry.com/wp-content/uploads/cricket/image_20131015131036.jpg" alt="">
+    </div>
+    <div class="box_2">
+        <img src="https://st2.cricketcountry.com/wp-content/uploads/cricket/image_20131015131036.jpg" alt="">
+    </div>
+    <div class="box_3">
+        <img src="https://st2.cricketcountry.com/wp-content/uploads/cricket/image_20131015131036.jpg" alt="">
+    </div>
+    
+</body>
+</html>

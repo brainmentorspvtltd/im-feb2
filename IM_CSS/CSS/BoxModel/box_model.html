@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* * - universal selector */
+        * {
+            margin: 0px;
+        }
+        .col {
+            /* height: 300px; */
+            /* width: 300px; */
+            width: 28%;
+            /* background-color: lightgray; */
+            /* padding: 10px; */
+            /* clockwise - top right bottom left */
+            /* padding: 10px 12px 14px 16px; */
+
+            /* top left+right bottom */
+            /* padding: 10px 12px 14px; */
+
+            /* top+bottom left+right */
+            padding: 10px 12px;
+
+            /* padding-left: 10px;
+            padding-right: 10px; */
+
+            border: 2px solid red;
+            /* margin: 10px; */
+
+            /* display: inline-block; */
+        }
+        .col-1 {
+            float: left;
+        }
+        .col-2 {
+            float: left;
+            /* margin-left: 5%; */
+            margin: 0px 4.5%;
+        }
+        .col-3 {
+            float: right;
+        }
+
+        .div_1 {
+            background-color: lightgreen;
+        }
+        /* .blank {
+            clear: both;
+        } */
+        /* Pseudo elements - :after and :before */
+        .row:after {
+            content: "";
+            display: block;
+            clear: both;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Box Model</h1>
+
+    <div id="parent" class="row">
+        <div class="col-1 col">
+            <h2>This is column_1</h2>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga, vero necessitatibus sint earum sequi consequuntur neque deserunt nulla beatae ipsum dolorum quae maxime nobis commodi eius at voluptatem ad asperiores?
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolor sint quibusdam, et temporibus corrupti dolorum nam, quaerat ratione cum quis provident soluta, facere fugit dolore sed laudantium repudiandae repellat eos.
+        </div>
+    
+        <div class="col-2 col">
+            <h2>This is column_2</h2>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga, vero necessitatibus sint earum sequi consequuntur neque deserunt nulla beatae ipsum dolorum quae maxime nobis commodi eius at voluptatem ad asperiores?
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolor sint quibusdam, et temporibus corrupti dolorum nam, quaerat ratione cum quis provident soluta, facere fugit dolore sed laudantium repudiandae repellat eos.
+        </div>
+    
+        <div class="col-3 col">
+            <h2>This is column_3</h2>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga, vero necessitatibus sint earum sequi consequuntur neque deserunt nulla beatae ipsum dolorum quae maxime nobis commodi eius at voluptatem ad asperiores?
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolor sint quibusdam, et temporibus corrupti dolorum nam, quaerat ratione cum quis provident soluta, facere fugit dolore sed laudantium repudiandae repellat eos.
+        </div>
+        <!-- <div class="blank"></div> -->
+    </div>
+
+    <div class="div_1">
+        <h2>This is another div</h2>
+        <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Obcaecati, illo? Dicta explicabo a minima incidunt voluptatum totam quasi quis cupiditate! Possimus non repellendus in asperiores deserunt suscipit dolore velit? Incidunt?
+        </p>
+    </div>
+    
+</body>
+</html>

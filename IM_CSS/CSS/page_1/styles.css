@@ -1,0 +1,96 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+.row::after {
+    content: "";
+    clear: both;
+    display: block;
+}
+
+#header {
+    background-color: #2874F0;
+    padding: 10px 0px;
+    position: fixed;
+    z-index: 1;
+    /* bottom: 0px;
+    right: 0px; */
+    width: 100%;
+    top: 0px;
+}
+#header h1 {
+    color: #fff;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    word-spacing: 4px;
+}
+#header h1::first-letter {
+    color: red;
+    font-size: 50px;
+}
+
+img {
+    width: 100%;
+}
+
+#content {
+    padding: 20px;
+    margin-top: 100px;
+}
+
+#sidebar_1 {
+    float: left;
+    width: 20%;
+}
+#sidebar_1 .box {
+    background-color: lightsteelblue;
+    padding: 10px;
+    margin-bottom: 100px;
+    position: sticky;
+    top: 110px;
+}
+#sidebar_1 ul {
+    list-style: none;
+}
+#sidebar_1 ul li {
+    padding: 10px 0px;
+    background-color: lightyellow;
+    margin-bottom: 10px;
+}
+#sidebar_1 ul li a {
+    color: black;
+    text-decoration: none;
+}
+
+#main {
+    width: 45%;
+    float: left;
+    margin-left: 5%;
+    padding: 10px;
+    background-color: lightsteelblue;
+    /* position: relative; */
+}
+#main .play-icon {
+    position: absolute;
+    width: 10%;
+    top: 50%;
+    left: 50%;
+    margin-left: -5%;
+    margin-top: -5%;
+}
+.image {
+    position: relative;
+}
+
+#sidebar_2 {
+    width: 22%;
+    /* float: right; */
+    padding: 10px;
+    position: fixed;
+    right: 20px;
+    height: 75%;
+    /* overflow: scroll; */
+    overflow-y: scroll;
+    background-color: lightsteelblue;
+}
